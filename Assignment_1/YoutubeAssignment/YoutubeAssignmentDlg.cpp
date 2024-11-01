@@ -193,7 +193,7 @@ void CYoutubeAssignmentDlg::OnBnClickedAction()
 
 		// 이미지 저장
 		CString filePath;
-		filePath.Format(_T("../x64/Debug/image/%d.jpg"), i);
+		filePath.Format(_T("../Debug/image/%d.jpg"), i);
 		SaveJPG(dc, filePath);
 
 		curX += dx;
