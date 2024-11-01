@@ -1,0 +1,22 @@
+#include <string>
+#include <sstream>
+#include <cstdlib>
+#include <vector>
+
+using namespace std;
+
+int solution(string s) {
+    int answer = 0;
+    stringstream ss(s);
+    string split_s;
+    int temp = 0;
+    while(ss>>split_s){
+        if(split_s == "Z")
+            answer -= temp;
+        else{
+            answer += stoi(split_s);
+            temp = stoi(split_s);
+        }
+    }
+    return answer;
+}

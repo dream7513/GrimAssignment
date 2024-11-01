@@ -1,0 +1,15 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<string> order) {
+    int answer = 0;
+    for(string i : order){
+        if(i.find("americano") != string::npos || i.find("anything") != string::npos)
+            answer += 4500;
+        else if(i.find("cafelatte") != string::npos)
+            answer += 5000;
+    }
+    return answer;
+}
